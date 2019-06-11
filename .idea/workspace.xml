@@ -17,7 +17,6 @@
       <change afterPath="$PROJECT_DIR$/../Hibernate/src/main/resources/User.hbm.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Leetcode/Roman/src/Roman.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mvcmaven/src/main/java/com/ny3an6/mvcmaven/models/Car.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mvcmaven/src/main/java/com/ny3an6/mvcmaven/models/User.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled/src/com/company/abstracts/A.java" afterDir="false" />
@@ -64,6 +63,11 @@
       <change beforePath="$PROJECT_DIR$/../8. SpringDemo/src/main/java/ru/ivmiit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../8. SpringDemo/src/main/java/ru/ivmiit/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../9. SpringJavaConfigDemo/src/main/java/ru/ivmiit/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../9. SpringJavaConfigDemo/src/main/java/ru/ivmiit/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../9. SpringJavaConfigDemo/src/main/java/ru/ivmiit/IndependentMessageRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../9. SpringJavaConfigDemo/src/main/java/ru/ivmiit/IndependentMessageRenderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Documents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/company/Postgres.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -148,7 +152,7 @@
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="465">
-              <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+              <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -157,7 +161,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+              <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -258,9 +262,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="360" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="x" value="130" />
+    <option name="y" value="422" />
+    <option name="width" value="1910" />
+    <option name="height" value="810" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -342,12 +347,12 @@
       <workItem from="1560182892091" duration="8220000" />
       <workItem from="1560258791168" duration="7483000" />
       <workItem from="1560274596230" duration="1966000" />
-      <workItem from="1560288120197" duration="2283000" />
+      <workItem from="1560288120197" duration="3448000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38287000" />
+    <option name="totallyTimeSpent" value="39452000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -372,12 +377,12 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290735" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38658148" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38658148" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3290735" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.33013844" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.33013844" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3290735" />
@@ -387,7 +392,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.32959402" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.32959402" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" weight="0.20405982" />
@@ -471,14 +476,14 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
-          <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
         </state>
       </provider>
     </entry>
