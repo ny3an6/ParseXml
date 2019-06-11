@@ -1,0 +1,1028 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="cabinet@172.20.1.30">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.15">
+    <root id="1">
+      <ServerVersion>11.2</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="a3_cdr">
+      <ObjectId>16387</ObjectId>
+      <StateNumber>574</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="3" parent="1" name="a4_cdr">
+      <ObjectId>16388</ObjectId>
+      <StateNumber>575</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="4" parent="1" name="cabinet">
+      <ObjectId>16384</ObjectId>
+      <StateNumber>569</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>19940</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+      <Relations>sequence|table|46896|46887|1
+sequence|table|56926|56928|1
+</Relations>
+    </database>
+    <database id="5" parent="1" name="postgres">
+      <ObjectId>13067</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <StateNumber>567</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="6" parent="1" name="test_db_1">
+      <ObjectId>56913</ObjectId>
+      <StateNumber>19922</StateNumber>
+      <Owner>postgres</Owner>
+    </database>
+    <role id="7" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_read_server_files">
+      <ObjectId>4569</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="14" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="15" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <Replication>1</Replication>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="16" parent="4" name="information_schema">
+      <ObjectId>12771</ObjectId>
+      <StateNumber>366</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="17" parent="4" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <StateNumber>359</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="18" parent="4" name="pg_temp_1">
+      <ObjectId>11804</ObjectId>
+      <StateNumber>121</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="19" parent="4" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <StateNumber>1</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="20" parent="4" name="pg_toast_temp_1">
+      <ObjectId>11805</ObjectId>
+      <StateNumber>121</StateNumber>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="21" parent="4" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <StateNumber>360</StateNumber>
+      <Owner>postgres</Owner>
+      <IntrospectionStateNumber>19941</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="22" parent="4" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="23" parent="4" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="24" parent="4" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="25" parent="4" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="26" parent="4" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="27" parent="4" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <StateNumber>1</StateNumber>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <extension id="28" parent="4" name="plpgsql">
+      <ObjectId>13053</ObjectId>
+      <Comment>PL/pgSQL procedural language</Comment>
+      <StateNumber>519</StateNumber>
+      <Version>1.0</Version>
+      <SchemaName>pg_catalog</SchemaName>
+      <SchemaId>11</SchemaId>
+    </extension>
+    <sequence id="29" parent="21" name="hibernate_sequence">
+      <ObjectId>46852</ObjectId>
+      <StateNumber>15108</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="30" parent="21" name="web_credentials_userid_seq">
+      <ObjectId>46896</ObjectId>
+      <StateNumber>15122</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="31" parent="21" name="xmldocuments_id_seq">
+      <ObjectId>56926</ObjectId>
+      <StateNumber>19939</StateNumber>
+      <Owner>postgres</Owner>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="32" parent="21" name="admin_credent">
+      <ObjectId>46840</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>15104</StateNumber>
+    </table>
+    <table id="33" parent="21" name="agreements">
+      <ObjectId>46846</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>19928</StateNumber>
+    </table>
+    <table id="34" parent="21" name="numbers">
+      <ObjectId>46854</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>15110</StateNumber>
+    </table>
+    <table id="35" parent="21" name="numbers_bil">
+      <ObjectId>46860</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>15112</StateNumber>
+    </table>
+    <table id="36" parent="21" name="onec_resources">
+      <ObjectId>46868</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>15114</StateNumber>
+    </table>
+    <table id="37" parent="21" name="payments">
+      <ObjectId>46874</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>15716</StateNumber>
+    </table>
+    <table id="38" parent="21" name="specifications">
+      <ObjectId>46882</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>15118</StateNumber>
+    </table>
+    <table id="39" parent="21" name="user_role">
+      <ObjectId>47955</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>15718</StateNumber>
+    </table>
+    <table id="40" parent="21" name="web_credentials">
+      <ObjectId>46887</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>15718</StateNumber>
+    </table>
+    <table id="41" parent="21" name="xmldocuments">
+      <ObjectId>56928</ObjectId>
+      <Owner>postgres</Owner>
+      <StateNumber>19939</StateNumber>
+    </table>
+    <routine id="42" parent="21" name="bill_info">
+      <ObjectId>46834</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>1290</SourceTextLength>
+      <StateNumber>15098</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>agreem text, spec text, datefrom date DEFAULT date_trunc(&apos;month&apos;::text, now()), dateto date DEFAULT now(), OUT ondate date, OUT inclocal integer, OUT inczone integer, OUT local integer, OUT zone integer, OUT overlocal integer, OUT overzone integer, OUT avlocal integer, OUT avzone integer, OUT mgmn integer, OUT fixpay numeric, OUT sumlocal numeric, OUT sumzone numeric, OUT summgmn numeric</ArgumentsDefinition>
+      <ResultsDefinition>record</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="43" parent="21" name="clearpart">
+      <ObjectId>46835</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>350</SourceTextLength>
+      <StateNumber>15099</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>cdrpat text</ArgumentsDefinition>
+      <ResultsDefinition>void</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <routine id="44" parent="21" name="client_numbers">
+      <ObjectId>46836</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>344</SourceTextLength>
+      <StateNumber>15100</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>agreement text</ArgumentsDefinition>
+      <ResultsDefinition>TABLE(number text, bind text, specification text, ondate date)</ResultsDefinition>
+      <LanguageName>sql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ReturnsSet>1</ReturnsSet>
+      <Cost>10.0</Cost>
+      <Rows>10.0</Rows>
+    </routine>
+    <routine id="45" parent="21" name="client_numbers_bil">
+      <ObjectId>46837</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>620</SourceTextLength>
+      <StateNumber>15101</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>agreement text, datefrom date DEFAULT date_trunc(&apos;month&apos;::text, now()), dateto date DEFAULT now()</ArgumentsDefinition>
+      <ResultsDefinition>TABLE(number text, bind text, specification text, local bigint, zone bigint, mgmn bigint)</ResultsDefinition>
+      <LanguageName>sql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ReturnsSet>1</ReturnsSet>
+      <Cost>100.0</Cost>
+      <Rows>1000.0</Rows>
+    </routine>
+    <routine id="46" parent="21" name="client_numbers_bil">
+      <ObjectId>46838</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>633</SourceTextLength>
+      <StateNumber>15102</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>agreement text, specification text, datefrom date DEFAULT date_trunc(&apos;month&apos;::text, now()), dateto date DEFAULT now()</ArgumentsDefinition>
+      <ResultsDefinition>TABLE(number text, bind text, local bigint, zone bigint, mgmn bigint)</ResultsDefinition>
+      <LanguageName>sql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <ReturnsSet>1</ReturnsSet>
+      <Cost>100.0</Cost>
+      <Rows>1000.0</Rows>
+    </routine>
+    <routine id="47" parent="21" name="get_local">
+      <ObjectId>46839</ObjectId>
+      <Owner>postgres</Owner>
+      <SourceTextLength>258</SourceTextLength>
+      <StateNumber>15103</StateNumber>
+      <VolatilityKind>volatile</VolatilityKind>
+      <ArgumentsDefinition>text, text, date, date</ArgumentsDefinition>
+      <ResultsDefinition>text</ResultsDefinition>
+      <LanguageName>plpgsql</LanguageName>
+      <RoutineKind>function</RoutineKind>
+      <Cost>100.0</Cost>
+    </routine>
+    <column id="48" parent="32" name="username">
+      <Position>1</Position>
+      <DataType>varchar(80)|0s</DataType>
+      <StateNumber>15104</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="49" parent="32" name="password">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>15104</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="50" parent="33" name="ident">
+      <Position>1</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15106</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="51" parent="33" name="customer_name">
+      <Position>2</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15106</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="52" parent="33" name="agreement">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15106</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="53" parent="33" name="orgname">
+      <Position>4</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>15106</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="54" parent="33" name="balance0">
+      <Position>5</Position>
+      <DataType>numeric(15,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15106</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="55" parent="33" name="balance">
+      <Position>6</Position>
+      <DataType>numeric(15,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15106</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="56" parent="33" name="agrement">
+      <Position>8</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>19928</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="57" parent="33" name="agreements_pkey">
+      <ObjectId>46948</ObjectId>
+      <StateNumber>15149</StateNumber>
+      <ColNames>agreement</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="58" parent="33" name="agreements_pkey">
+      <ObjectId>46949</ObjectId>
+      <StateNumber>15149</StateNumber>
+      <ColNames>agreement</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>agreements_pkey</UnderlyingIndexName>
+    </key>
+    <column id="59" parent="34" name="agreement">
+      <Position>1</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15110</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="60" parent="34" name="specification">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15110</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="61" parent="34" name="number">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15110</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="62" parent="34" name="bind">
+      <Position>4</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>15110</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="63" parent="34" name="numbers_pkey">
+      <ObjectId>46966</ObjectId>
+      <StateNumber>15153</StateNumber>
+      <ColNames>number</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="64" parent="34" name="numbers_pkey">
+      <ObjectId>46967</ObjectId>
+      <StateNumber>15153</StateNumber>
+      <ColNames>number</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>numbers_pkey</UnderlyingIndexName>
+    </key>
+    <column id="65" parent="35" name="date">
+      <Position>1</Position>
+      <DataType>date|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15112</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="66" parent="35" name="agreement">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15112</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="67" parent="35" name="specification">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15112</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="68" parent="35" name="number">
+      <Position>4</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15112</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="69" parent="35" name="incom">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>15112</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="70" parent="35" name="local">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>15112</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="71" parent="35" name="zone">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>15112</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="72" parent="35" name="mg">
+      <Position>8</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>15112</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="73" parent="35" name="summg">
+      <Position>9</Position>
+      <DataType>numeric(15,2 digit)|0s</DataType>
+      <StateNumber>15112</StateNumber>
+      <DefaultExpression>0.00</DefaultExpression>
+      <TypeId>1700</TypeId>
+    </column>
+    <index id="74" parent="35" name="bill_numbers">
+      <ObjectId>46950</ObjectId>
+      <StateNumber>15150</StateNumber>
+      <ColNames>date
+number</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <index id="75" parent="35" name="numbers_bil_date_idx">
+      <ObjectId>46976</ObjectId>
+      <StateNumber>15162</StateNumber>
+      <ColNames>date</ColNames>
+    </index>
+    <index id="76" parent="35" name="numbers_bil_agr_spec_idx">
+      <ObjectId>46974</ObjectId>
+      <StateNumber>15157</StateNumber>
+      <ColNames>agreement
+specification</ColNames>
+    </index>
+    <index id="77" parent="35" name="numbers_bil_agreement_idx">
+      <ObjectId>46975</ObjectId>
+      <StateNumber>15161</StateNumber>
+      <ColNames>agreement</ColNames>
+    </index>
+    <key id="78" parent="35" name="bill_numbers">
+      <ObjectId>46951</ObjectId>
+      <StateNumber>15150</StateNumber>
+      <ColNames>date
+number</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>bill_numbers</UnderlyingIndexName>
+    </key>
+    <column id="79" parent="36" name="ident">
+      <Position>1</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15114</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="80" parent="36" name="customer_name">
+      <Position>2</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15114</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="81" parent="36" name="agreement">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15114</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="82" parent="36" name="specification">
+      <Position>4</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15114</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="83" parent="36" name="number">
+      <Position>5</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15114</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="84" parent="36" name="bind">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>15114</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <index id="85" parent="36" name="onec_resources_pkey">
+      <ObjectId>46968</ObjectId>
+      <StateNumber>15154</StateNumber>
+      <ColNames>number</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="86" parent="36" name="onec_resources_pkey">
+      <ObjectId>46969</ObjectId>
+      <StateNumber>15154</StateNumber>
+      <ColNames>number</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>onec_resources_pkey</UnderlyingIndexName>
+    </key>
+    <column id="87" parent="37" name="date">
+      <Position>1</Position>
+      <DataType>date|0s</DataType>
+      <StateNumber>15116</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="88" parent="37" name="agreement">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15116</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="89" parent="37" name="document">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>15116</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="90" parent="37" name="sumdeb">
+      <Position>4</Position>
+      <DataType>numeric(15,2 digit)|0s</DataType>
+      <StateNumber>15116</StateNumber>
+      <DefaultExpression>0.00</DefaultExpression>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="91" parent="37" name="sumcred">
+      <Position>5</Position>
+      <DataType>numeric(15,2 digit)|0s</DataType>
+      <StateNumber>15116</StateNumber>
+      <DefaultExpression>0.00</DefaultExpression>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="92" parent="37" name="invoice_link">
+      <Position>6</Position>
+      <DataType>varchar(150)|0s</DataType>
+      <StateNumber>15116</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="93" parent="37" name="factura_link">
+      <Position>7</Position>
+      <DataType>varchar(150)|0s</DataType>
+      <StateNumber>15116</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="94" parent="37" name="act_link">
+      <Position>8</Position>
+      <DataType>varchar(150)|0s</DataType>
+      <StateNumber>15116</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="95" parent="37" name="facture_link">
+      <Position>9</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>15716</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="96" parent="38" name="agreement">
+      <Position>1</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15118</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="97" parent="38" name="specification">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15118</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="98" parent="38" name="ondate">
+      <Position>3</Position>
+      <DataType>date|0s</DataType>
+      <StateNumber>15118</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="99" parent="38" name="fixpay">
+      <Position>4</Position>
+      <DataType>numeric(15,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15118</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="100" parent="38" name="inclocal">
+      <Position>5</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>15118</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="101" parent="38" name="inczone">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>15118</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="102" parent="38" name="tariflocal">
+      <Position>7</Position>
+      <DataType>numeric(15,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15118</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="103" parent="38" name="tarifzone">
+      <Position>8</Position>
+      <DataType>numeric(15,2 digit)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15118</StateNumber>
+      <TypeId>1700</TypeId>
+    </column>
+    <column id="104" parent="38" name="statserver">
+      <Position>9</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <StateNumber>15118</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="105" parent="38" name="specifications_pkey">
+      <ObjectId>46970</ObjectId>
+      <StateNumber>15155</StateNumber>
+      <ColNames>agreement
+specification</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="106" parent="38" name="specifications_pkey">
+      <ObjectId>46971</ObjectId>
+      <StateNumber>15155</StateNumber>
+      <ColNames>agreement
+specification</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>specifications_pkey</UnderlyingIndexName>
+    </key>
+    <column id="107" parent="39" name="user_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15717</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="108" parent="39" name="roles">
+      <Position>2</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <StateNumber>15717</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <foreign-key id="109" parent="39" name="fkdygkflltsswh3mjtug0jw7mbk">
+      <ObjectId>47958</ObjectId>
+      <StateNumber>15718</StateNumber>
+      <ColNames>user_id</ColNames>
+      <RefTableId>46887</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>web_credentials</RefTableName>
+      <RefKeyName>web_credentials_pkey</RefKeyName>
+      <RefColNames>userid</RefColNames>
+    </foreign-key>
+    <column id="110" parent="40" name="userid">
+      <Position>1</Position>
+      <DataType>bigint|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>15125</StateNumber>
+      <DefaultExpression>nextval(&apos;public.web_credentials_userid_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+    </column>
+    <column id="111" parent="40" name="onec_id">
+      <Position>2</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <StateNumber>15120</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="112" parent="40" name="username">
+      <Position>3</Position>
+      <DataType>varchar(80)|0s</DataType>
+      <StateNumber>15120</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="113" parent="40" name="password">
+      <Position>4</Position>
+      <DataType>varchar(200)|0s</DataType>
+      <StateNumber>15120</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="114" parent="40" name="confirm">
+      <Position>5</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>15120</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="115" parent="40" name="bind">
+      <Position>6</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>15120</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="116" parent="40" name="user_enabled">
+      <Position>7</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>15120</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="117" parent="40" name="listen_permit">
+      <Position>8</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>15120</StateNumber>
+      <DefaultExpression>false</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="118" parent="40" name="docs_permit">
+      <Position>9</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>15120</StateNumber>
+      <DefaultExpression>false</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="119" parent="40" name="web_credentials_pkey">
+      <ObjectId>46972</ObjectId>
+      <StateNumber>15156</StateNumber>
+      <ColNames>userid</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="120" parent="40" name="web_credentials_pkey">
+      <ObjectId>46973</ObjectId>
+      <StateNumber>15156</StateNumber>
+      <ColNames>userid</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>web_credentials_pkey</UnderlyingIndexName>
+    </key>
+    <column id="121" parent="41" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>19939</StateNumber>
+      <DefaultExpression>nextval(&apos;xmldocuments_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="122" parent="41" name="name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <StateNumber>19939</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="123" parent="41" name="xmldocuments_pkey">
+      <ObjectId>56932</ObjectId>
+      <StateNumber>19939</StateNumber>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+      <Primary>1</Primary>
+    </index>
+    <key id="124" parent="41" name="xmldocuments_pkey">
+      <ObjectId>56933</ObjectId>
+      <StateNumber>19939</StateNumber>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>xmldocuments_pkey</UnderlyingIndexName>
+    </key>
+    <argument id="125" parent="42" name="agreem">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="126" parent="42" name="spec">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <DefaultExpression>date_trunc(&apos;month&apos;::text</DefaultExpression>
+    </argument>
+    <argument id="127" parent="42" name="datefrom">
+      <Position>3</Position>
+      <DataType>date|0s</DataType>
+      <DefaultExpression>now())</DefaultExpression>
+    </argument>
+    <argument id="128" parent="42" name="dateto">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+      <DefaultExpression>now()</DefaultExpression>
+    </argument>
+    <argument id="129" parent="42" name="ondate">
+      <Position>5</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>date|0s</DataType>
+    </argument>
+    <argument id="130" parent="42" name="inclocal">
+      <Position>6</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>integer|0s</DataType>
+    </argument>
+    <argument id="131" parent="42" name="inczone">
+      <Position>7</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>integer|0s</DataType>
+    </argument>
+    <argument id="132" parent="42" name="local">
+      <Position>8</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>integer|0s</DataType>
+    </argument>
+    <argument id="133" parent="42" name="zone">
+      <Position>9</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>integer|0s</DataType>
+    </argument>
+    <argument id="134" parent="42" name="overlocal">
+      <Position>10</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>integer|0s</DataType>
+    </argument>
+    <argument id="135" parent="42" name="overzone">
+      <Position>11</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>integer|0s</DataType>
+    </argument>
+    <argument id="136" parent="42" name="avlocal">
+      <Position>12</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>integer|0s</DataType>
+    </argument>
+    <argument id="137" parent="42" name="avzone">
+      <Position>13</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>integer|0s</DataType>
+    </argument>
+    <argument id="138" parent="42" name="mgmn">
+      <Position>14</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>integer|0s</DataType>
+    </argument>
+    <argument id="139" parent="42" name="fixpay">
+      <Position>15</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>numeric|0s</DataType>
+    </argument>
+    <argument id="140" parent="42" name="sumlocal">
+      <Position>16</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>numeric|0s</DataType>
+    </argument>
+    <argument id="141" parent="42" name="sumzone">
+      <Position>17</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>numeric|0s</DataType>
+    </argument>
+    <argument id="142" parent="42" name="summgmn">
+      <Position>18</Position>
+      <ArgumentDirection>O</ArgumentDirection>
+      <DataType>numeric|0s</DataType>
+    </argument>
+    <argument id="143" parent="42">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>record|0s</DataType>
+    </argument>
+    <argument id="144" parent="43" name="cdrpat">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="145" parent="43">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>void|0s</DataType>
+    </argument>
+    <argument id="146" parent="44" name="agreement">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="147" parent="44">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(number text, bind text, specification text, ondate date)|0v</DataType>
+    </argument>
+    <argument id="148" parent="45" name="agreement">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+      <DefaultExpression>date_trunc(&apos;month&apos;::text</DefaultExpression>
+    </argument>
+    <argument id="149" parent="45" name="datefrom">
+      <Position>2</Position>
+      <DataType>date|0s</DataType>
+      <DefaultExpression>now())</DefaultExpression>
+    </argument>
+    <argument id="150" parent="45" name="dateto">
+      <Position>3</Position>
+      <DataType>date|0s</DataType>
+      <DefaultExpression>now()</DefaultExpression>
+    </argument>
+    <argument id="151" parent="45">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(number text, bind text, specification text, local bigint, zone bigint, mgmn bigint)|0v</DataType>
+    </argument>
+    <argument id="152" parent="46" name="agreement">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="153" parent="46" name="specification">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+      <DefaultExpression>date_trunc(&apos;month&apos;::text</DefaultExpression>
+    </argument>
+    <argument id="154" parent="46" name="datefrom">
+      <Position>3</Position>
+      <DataType>date|0s</DataType>
+      <DefaultExpression>now())</DefaultExpression>
+    </argument>
+    <argument id="155" parent="46" name="dateto">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+      <DefaultExpression>now()</DefaultExpression>
+    </argument>
+    <argument id="156" parent="46">
+      <ArgumentDirection>T</ArgumentDirection>
+      <DataType>table(number text, bind text, local bigint, zone bigint, mgmn bigint)|0v</DataType>
+    </argument>
+    <argument id="157" parent="47">
+      <Position>1</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="158" parent="47">
+      <Position>2</Position>
+      <DataType>text|0s</DataType>
+    </argument>
+    <argument id="159" parent="47">
+      <Position>3</Position>
+      <DataType>date|0s</DataType>
+    </argument>
+    <argument id="160" parent="47">
+      <Position>4</Position>
+      <DataType>date|0s</DataType>
+    </argument>
+    <argument id="161" parent="47">
+      <ArgumentDirection>R</ArgumentDirection>
+      <DataType>text|0s</DataType>
+    </argument>
+  </database-model>
+</dataSource>
