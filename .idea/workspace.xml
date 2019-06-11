@@ -17,6 +17,7 @@
       <change afterPath="$PROJECT_DIR$/../Hibernate/src/main/resources/User.hbm.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Leetcode/Roman/src/Roman.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mvcmaven/src/main/java/com/ny3an6/mvcmaven/models/Car.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../mvcmaven/src/main/java/com/ny3an6/mvcmaven/models/User.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../untitled/src/com/company/abstracts/A.java" afterDir="false" />
@@ -63,8 +64,6 @@
       <change beforePath="$PROJECT_DIR$/../8. SpringDemo/src/main/java/ru/ivmiit/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../8. SpringDemo/src/main/java/ru/ivmiit/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../9. SpringJavaConfigDemo/src/main/java/ru/ivmiit/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../9. SpringJavaConfigDemo/src/main/java/ru/ivmiit/AppConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../9. SpringJavaConfigDemo/src/main/java/ru/ivmiit/IndependentMessageRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../9. SpringJavaConfigDemo/src/main/java/ru/ivmiit/IndependentMessageRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -148,8 +147,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+            <state relative-caret-position="465">
+              <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -158,7 +157,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -343,12 +342,12 @@
       <workItem from="1560182892091" duration="8220000" />
       <workItem from="1560258791168" duration="7483000" />
       <workItem from="1560274596230" duration="1966000" />
-      <workItem from="1560288120197" duration="2024000" />
+      <workItem from="1560288120197" duration="2283000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38028000" />
+    <option name="totallyTimeSpent" value="38287000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -361,6 +360,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="360" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19284189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -470,15 +470,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        <state relative-caret-position="465">
+          <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="1" column="6" lean-forward="true" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
         </state>
       </provider>
     </entry>
