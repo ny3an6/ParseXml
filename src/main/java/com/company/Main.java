@@ -45,11 +45,12 @@ public class Main {
             ConnectDb connectDb = new ConnectDb(url,username, password, dbDriver);
             connectDb.addDocuments(documents);
 
-
+            // findAll
             for (Documents documents1 : connectDb.findAll()){
                 System.out.println("DocumentsFromDb: "+documents1.getValue());
             }
 
+            // findById
             Documents id = connectDb.findById(138);
             System.out.println(id.getId()+"  "+id.getValue());
 

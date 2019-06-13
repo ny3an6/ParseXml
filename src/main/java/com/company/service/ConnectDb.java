@@ -49,11 +49,10 @@ public class ConnectDb implements Closeable {
             ResultSet resultSet = statement.executeQuery(SQL_SELECT_ALL);
             while (resultSet.next()) {
                 String name = resultSet.getString("name");
-
                 Documents documentFromDb = new Documents(name);
-
                 documentsFromDb.add(documentFromDb);
             }
+            statement.close();
             return documentsFromDb;
         } catch (SQLException e) {
             throw new IllegalStateException(e);
@@ -69,8 +68,10 @@ public class ConnectDb implements Closeable {
             if (resultSet.next()) {
                 Integer idDoc = resultSet.getInt("id");
                 String name = resultSet.getString("name");
+                pr.close();
                 return new Documents(idDoc, name);
             }
+            pr.close();
            return documentId;
         } catch (SQLException e) {
             throw new IllegalStateException(e);
