@@ -12,6 +12,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.*;
 
 
@@ -28,8 +29,9 @@ public class Main {
             Document document = builder.parse(new File("src/main/resources/file.xml"));
 
             ArrayList<Documents> documents = new ArrayList<>();
-            CreateCollection cc = new CreateCollection();
+
             System.out.println("First task: ");
+            CreateCollection cc = new CreateCollection();
             cc.getListOfDocuments(document.getDocumentElement().getChildNodes(), documents);
             for (Documents doc : documents) {
                 System.out.println("   1) "+doc.getValue());
@@ -44,8 +46,15 @@ public class Main {
             connectDb.addDocuments(documents);
 
 
+            for (Documents documents1 : connectDb.findAll()){
+                System.out.println("DocumentsFromDb: "+documents1.getValue());
+            }
 
-        } catch (ParserConfigurationException | IOException | SAXException | ClassNotFoundException e) {
+            Documents id = connectDb.findById(138);
+            System.out.println(id.getId()+"  "+id.getValue());
+
+
+        } catch (ParserConfigurationException | IOException | SAXException | ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
 
