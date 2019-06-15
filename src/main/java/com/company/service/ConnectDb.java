@@ -2,17 +2,12 @@ package com.company.service;
 
 import com.company.models.Documents;
 
-import java.io.Closeable;
 import java.io.IOException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
-public class ConnectDb implements Closeable {
-    private String url;
-    private String username;
-    private String password;
+public class ConnectDb implements AutoCloseable{
     private Connection connection;
 
     private static final String SQL_INSERT_DOCUMENTS = "insert into xmldocuments(name) values (?)";
@@ -20,21 +15,16 @@ public class ConnectDb implements Closeable {
     private static final String SQL_SELECT_BY_ID = "select * from xmldocuments where id = ?";
 
     public ConnectDb(String url, String username, String password, String dbDriver) throws ClassNotFoundException, SQLException {
-        this.url = url;
-        this.username = username;
-        this.password = password;
         this.connection = DriverManager.getConnection(url, username, password);
         Class.forName("org." + dbDriver + ".Driver");
     }
 
     public void addDocuments(List<Documents> documents) {
-        try {
+        try (PreparedStatement ps = connection.prepareStatement(SQL_INSERT_DOCUMENTS)){
             for (Documents doc : documents) {
-                PreparedStatement ps = connection.prepareStatement(SQL_INSERT_DOCUMENTS);
                 System.out.println("   3) " + doc.getValue());
                 ps.setString(1, doc.getValue());
                 ps.executeUpdate();
-                ps.close();
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -43,15 +33,15 @@ public class ConnectDb implements Closeable {
     }
 
     public List<Documents> findAll() {
-        try {
+        try(Statement statement = connection.createStatement()) {
             List<Documents> documentsFromDb = new ArrayList<>();
-            Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(SQL_SELECT_ALL);
             while (resultSet.next()) {
                 String name = resultSet.getString("name");
                 Documents documentFromDb = new Documents(name);
                 documentsFromDb.add(documentFromDb);
             }
+            resultSet.close();
             statement.close();
             return documentsFromDb;
         } catch (SQLException e) {
@@ -60,19 +50,18 @@ public class ConnectDb implements Closeable {
     }
 
     public Documents findById(Integer id) {
-        try {
-            Documents documentId = new Documents();
-            PreparedStatement pr = connection.prepareStatement(SQL_SELECT_BY_ID);
+        try(PreparedStatement pr = connection.prepareStatement(SQL_SELECT_BY_ID)) {
+            Documents documentId = null;
             pr.setInt(1, id);
             ResultSet resultSet = pr.executeQuery();
             if (resultSet.next()) {
                 Integer idDoc = resultSet.getInt("id");
                 String name = resultSet.getString("name");
-                pr.close();
-                return new Documents(idDoc, name);
+                documentId = new Documents(idDoc, name);
             }
+            resultSet.close();
             pr.close();
-           return documentId;
+            return documentId;
         } catch (SQLException e) {
             throw new IllegalStateException(e);
         }
@@ -81,12 +70,16 @@ public class ConnectDb implements Closeable {
 
     @Override
     public void close() throws IOException {
-
+        try {
+            connection.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
 
 
-// закрытие потоков
+
 
 
 

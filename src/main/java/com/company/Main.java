@@ -2,7 +2,7 @@ package com.company;
 
 import com.company.service.ConnectDb;
 import com.company.models.Documents;
-import com.company.service.CreateCollection;
+import com.company.service.CreateCollectionService;
 import com.company.service.PrintValues;
 import org.w3c.dom.*;
 import org.xml.sax.SAXException;
@@ -17,10 +17,11 @@ import java.util.*;
 
 
 public class Main {
-    private static final String url = "jdbc:postgresql://172.20.1.30:32771/cabinet";
-    private static final String username = "postgres";
-    private static final String password = "postgres";
-    private static final String dbDriver = "postgresql";
+    private static final String URL = "jdbc:postgresql://172.20.1.30:32771/cabinet";
+    private static final String USERNAME = "postgres";
+    private static final String PASSWORD = "postgres";
+    private static final String DBDRIVER = "postgresql";
+
 
     public static void main(String[] args) {
         try {
@@ -29,20 +30,17 @@ public class Main {
             Document document = builder.parse(new File("src/main/resources/file.xml"));
 
             ArrayList<Documents> documents = new ArrayList<>();
-
+            CreateCollectionService.getListOfDocuments(document.getDocumentElement().getChildNodes(), documents);
             System.out.println("First task: ");
-            CreateCollection cc = new CreateCollection();
-            cc.getListOfDocuments(document.getDocumentElement().getChildNodes(), documents);
             for (Documents doc : documents) {
                 System.out.println("   1) "+doc.getValue());
             }
 
             System.out.println("Second task: ");
-            PrintValues printValues = new PrintValues();
-            printValues.getAttribute(document.getDocumentElement().getChildNodes());
+            PrintValues.getAttribute(document.getDocumentElement().getChildNodes());
 
             System.out.println("Third task: ");
-            ConnectDb connectDb = new ConnectDb(url,username, password, dbDriver);
+            ConnectDb connectDb = new ConnectDb(URL,USERNAME, PASSWORD, DBDRIVER);
             connectDb.addDocuments(documents);
 
             // findAll
@@ -55,7 +53,7 @@ public class Main {
             System.out.println(id.getId()+"  "+id.getValue());
 
 
-        } catch (ParserConfigurationException | IOException | SAXException | ClassNotFoundException | SQLException e) {
+        } catch (ClassNotFoundException | SQLException | ParserConfigurationException | IOException | SAXException e) {
             e.printStackTrace();
         }
 
