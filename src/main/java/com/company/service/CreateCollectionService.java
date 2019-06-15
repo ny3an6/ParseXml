@@ -17,7 +17,6 @@ public class CreateCollectionService {
                         if (name.equals("вид_док") && fullName.equals("вид документа")) {
                             NodeList childNode = ((Element) node).getElementsByTagName("par_list");
                             for (int j = 0; j < childNode.getLength(); j++) {
-                                System.out.println(childNode.item(j).getNodeName());
                                 NamedNodeMap attribute = childNode.item(j).getAttributes();
                                 documents.add(new Documents(attribute.getNamedItem("value").getNodeValue()));
                             }

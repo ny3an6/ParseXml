@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.service.CreateStructureDocument;
 import com.company.service.DbService;
 import com.company.models.Documents;
 import com.company.service.CreateCollectionService;
@@ -21,24 +22,21 @@ public class Main {
     private static final String USERNAME = "postgres";
     private static final String PASSWORD = "postgres";
     private static final String DBDRIVER = "postgresql";
-
+    private static final String FILELOCATION = "src/main/resources/file.xml";
 
     public static void main(String[] args) {
         try {
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder builder = factory.newDocumentBuilder();
-            Document document = builder.parse(new File("src/main/resources/file.xml"));
-
+            CreateStructureDocument document = new CreateStructureDocument(FILELOCATION);
             ArrayList<Documents> documents = new ArrayList<>();
-            CreateCollectionService.getListOfDocuments(document.getDocumentElement().getChildNodes(), documents);
-
+            CreateCollectionService.getListOfDocuments(document.getFile().getDocumentElement().getChildNodes(), documents);
+            // TODO Replace sout -> logger
             System.out.println("First task: ");
             for (Documents doc : documents) {
                 System.out.println("   1) "+doc.getValue());
             }
 
             System.out.println("Second task: ");
-            PrintValues.getAttribute(document.getDocumentElement().getChildNodes());
+            PrintValues.getAttribute(document.getFile().getDocumentElement().getChildNodes());
 
             System.out.println("Third task: ");
             DbService connectDb = new DbService(URL,USERNAME, PASSWORD, DBDRIVER);
@@ -54,7 +52,7 @@ public class Main {
             System.out.println(id.getId()+"  "+id.getValue());
             connectDb.close();
 
-        } catch (ClassNotFoundException | SQLException | ParserConfigurationException | IOException | SAXException e) {
+        } catch (ClassNotFoundException | SQLException | IOException e) {
             e.printStackTrace();
         }
 
