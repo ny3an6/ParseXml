@@ -1,6 +1,6 @@
 package com.company;
 
-import com.company.service.ConnectDb;
+import com.company.service.DbService;
 import com.company.models.Documents;
 import com.company.service.CreateCollectionService;
 import com.company.service.PrintValues;
@@ -31,6 +31,7 @@ public class Main {
 
             ArrayList<Documents> documents = new ArrayList<>();
             CreateCollectionService.getListOfDocuments(document.getDocumentElement().getChildNodes(), documents);
+
             System.out.println("First task: ");
             for (Documents doc : documents) {
                 System.out.println("   1) "+doc.getValue());
@@ -40,7 +41,7 @@ public class Main {
             PrintValues.getAttribute(document.getDocumentElement().getChildNodes());
 
             System.out.println("Third task: ");
-            ConnectDb connectDb = new ConnectDb(URL,USERNAME, PASSWORD, DBDRIVER);
+            DbService connectDb = new DbService(URL,USERNAME, PASSWORD, DBDRIVER);
             connectDb.addDocuments(documents);
 
             // findAll
@@ -51,11 +52,13 @@ public class Main {
             // findById
             Documents id = connectDb.findById(138);
             System.out.println(id.getId()+"  "+id.getValue());
-
+            connectDb.close();
 
         } catch (ClassNotFoundException | SQLException | ParserConfigurationException | IOException | SAXException e) {
             e.printStackTrace();
         }
+
+
 
 
     }

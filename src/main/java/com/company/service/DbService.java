@@ -7,14 +7,14 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConnectDb implements AutoCloseable{
+public class DbService implements AutoCloseable{
     private Connection connection;
 
     private static final String SQL_INSERT_DOCUMENTS = "insert into xmldocuments(name) values (?)";
     private static final String SQL_SELECT_ALL = "select * from xmldocuments";
     private static final String SQL_SELECT_BY_ID = "select * from xmldocuments where id = ?";
 
-    public ConnectDb(String url, String username, String password, String dbDriver) throws ClassNotFoundException, SQLException {
+    public DbService(String url, String username, String password, String dbDriver) throws ClassNotFoundException, SQLException {
         this.connection = DriverManager.getConnection(url, username, password);
         Class.forName("org." + dbDriver + ".Driver");
     }
