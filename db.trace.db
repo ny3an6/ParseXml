@@ -1,0 +1,8 @@
+2019-06-16 14:47:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Таблица "XMLDOCUMENTS" не найдена
+Table "XMLDOCUMENTS" not found; SQL statement:
+insert into xmldocuments(name) values (?) [42102-190]
+2019-06-16 14:47:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Таблица "XMLDOCUMENTS" не найдена
+Table "XMLDOCUMENTS" not found; SQL statement:
+select * from xmldocuments [42102-190]

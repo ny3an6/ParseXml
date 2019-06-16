@@ -9,14 +9,19 @@ import java.util.List;
 
 public class DbService implements AutoCloseable{
     private Connection connection;
-
-    private static final String SQL_INSERT_DOCUMENTS = "insert into xmldocuments(name) values (?)";
-    private static final String SQL_SELECT_ALL = "select * from xmldocuments";
-    private static final String SQL_SELECT_BY_ID = "select * from xmldocuments where id = ?";
+    private static final String SQL_INSERT_DOCUMENTS = "insert into documents(name) values (?)";
+    private static final String SQL_SELECT_ALL = "select * from documents";
+    private static final String SQL_SELECT_BY_ID = "select * from documents where id = ?";
 
     public DbService(String url, String username, String password, String dbDriver) throws ClassNotFoundException, SQLException {
         this.connection = DriverManager.getConnection(url, username, password);
         Class.forName("org." + dbDriver + ".Driver");
+    }
+
+    public DbService(String url, String dbDriver) throws SQLException, ClassNotFoundException {
+        this.connection = DriverManager.getConnection(url);
+        Class.forName("org." + dbDriver + ".Driver");
+        connection.createStatement().executeUpdate("create table documents (id int auto_increment, name varchar(255))");
     }
 
     public void addDocuments(List<Documents> documents) {

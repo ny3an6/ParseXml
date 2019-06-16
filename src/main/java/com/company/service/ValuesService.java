@@ -6,16 +6,17 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 
-public class PrintValues {
+public class ValuesService {
 
-    public static void getAttribute(NodeList nodeList) {
+    public static void print(NodeList nodeList) {
         for (int i = 0; i < nodeList.getLength(); i++) {
             Node node = nodeList.item(i);
             if (node.getNodeType() == Node.ELEMENT_NODE) { // либо nodeList.item(i) instanceof Element
-                if(((Element) node).hasAttribute("step") && ((Element) node).hasAttribute("name") ){
-                    String step = ((Element) node).getAttribute("step").trim().toLowerCase();
-                    String name = ((Element) node).getAttribute("name").trim().toLowerCase();
-                    if(step.equals("1") && name.equals("гражданство")){
+                Element element = (Element) node;
+                if(element.hasAttribute("step") && element.hasAttribute("name") ){
+                    String step = element.getAttribute("step");
+                    String name = element.getAttribute("name");
+                    if(normalizeString(step).equals("1") && normalizeString(name).equals("гражданство")){
                         NamedNodeMap attribute = node.getAttributes();
                         for(int j = 0; j < attribute.getLength(); j++){
                             Node node1 = attribute.item(j);
@@ -24,13 +25,13 @@ public class PrintValues {
                     }
                 }
                 if (node.hasChildNodes()) {
-                    getAttribute(node.getChildNodes());
+                    print(node.getChildNodes());
                 }
             }
         }
     }
 
-    private String normalizeString(String value){
+    private static String normalizeString(String value){
         return value.trim().toLowerCase();
     }
 }

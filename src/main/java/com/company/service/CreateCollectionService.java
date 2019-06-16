@@ -10,12 +10,13 @@ public class CreateCollectionService {
     public static void getListOfDocuments(NodeList nodeList, List<Documents> documents) {
             for (int i = 0; i < nodeList.getLength(); i++) {
                 Node node = nodeList.item(i);
-                if (node.getNodeType() == Node.ELEMENT_NODE) { // nodeList.item(i) instanceof Element
-                    if (((Element) node).hasAttribute("name") && ((Element) node).hasAttribute("fullname")) {
-                        String name = ((Element) node).getAttribute("name").trim().toLowerCase();
-                        String fullName = ((Element) node).getAttribute("fullname").trim().toLowerCase();
-                        if (name.equals("вид_док") && fullName.equals("вид документа")) {
-                            NodeList childNode = ((Element) node).getElementsByTagName("par_list");
+                if (node.getNodeType() == Node.ELEMENT_NODE) {// nodeList.item(i) instanceof Element
+                    Element element = (Element) node;
+                    if (element.hasAttribute("name") && element.hasAttribute("fullname")) {
+                        String name = element.getAttribute("name");
+                        String fullName = element.getAttribute("fullname");
+                        if (normalizeString(name).equals("вид_док") && normalizeString(fullName).equals("вид документа")) {
+                            NodeList childNode = element.getElementsByTagName("par_list");
                             for (int j = 0; j < childNode.getLength(); j++) {
                                 NamedNodeMap attribute = childNode.item(j).getAttributes();
                                 documents.add(new Documents(attribute.getNamedItem("value").getNodeValue()));
@@ -38,6 +39,10 @@ public class CreateCollectionService {
                 }
             }
             documents.sort(Comparator.comparing(Documents::getValue));
+    }
+
+    private static String normalizeString(String value){
+        return value.trim().toLowerCase();
     }
 }
 
