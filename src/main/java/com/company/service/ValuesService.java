@@ -5,8 +5,11 @@ import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import java.util.logging.Logger;
+
 
 public class ValuesService {
+    private static final Logger logger2 = Logger.getLogger("com.company.service");
 
     public static void print(NodeList nodeList) {
         for (int i = 0; i < nodeList.getLength(); i++) {
@@ -20,7 +23,7 @@ public class ValuesService {
                         NamedNodeMap attribute = node.getAttributes();
                         for(int j = 0; j < attribute.getLength(); j++){
                             Node node1 = attribute.item(j);
-                            System.out.println("   2) "+node1.getNodeName()+ " :" + node1.getNodeValue());
+                            logger2.info("   2) " + node1.getNodeName() + " :" + node1.getNodeValue());
                         }
                     }
                 }

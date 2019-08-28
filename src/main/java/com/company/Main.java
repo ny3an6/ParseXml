@@ -9,26 +9,26 @@ import com.company.service.ValuesService;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.*;
+import java.util.logging.Logger;
 
 
 public class Main {
-    private static final String URL_POSTGRES = "jdbc:postgresql://172.20.1.30:32771/cabinet";
     private static final String URL_H2 = "jdbc:h2:mem:xmldocuments";
-    private static final String USERNAME = "postgres";
-    private static final String PASSWORD = "postgres";
-    private static final String DB_DRIVER_POSTGRES = "postgresql";
     private static final String DB_DRIVER_H2 = "h2";
     private static final String FILE_LOCATION = "src/main/resources/file.xml";
+    private static final Logger logger = Logger.getGlobal();
+
 
     public static void main(String[] args) {
         try {
             CreateStructureDocument document = new CreateStructureDocument(FILE_LOCATION);
             ArrayList<Documents> documents = new ArrayList<>();
             CreateCollectionService.getListOfDocuments(document.getFile().getDocumentElement().getChildNodes(), documents);
-            // TODO Replace sout -> logger
+
+
             System.out.println("First task: ");
             for (Documents doc : documents) {
-                System.out.println("   1) "+doc.getValue());
+                logger.info("   1) "+doc.getValue());
             }
 
             System.out.println("Second task: ");
@@ -40,7 +40,7 @@ public class Main {
 
             // findAll
             for (Documents documents1 : connectDb.findAll()){
-                System.out.println("DocumentsFromDb: "+documents1.getValue());
+                System.out.println("DocumentsFromDb: "+documents1.getId()+" "+documents1.getValue());
             }
 
             // findById

@@ -34,7 +34,6 @@ public class DbService implements AutoCloseable{
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     public List<Documents> findAll() {
@@ -42,8 +41,9 @@ public class DbService implements AutoCloseable{
             List<Documents> documentsFromDb = new ArrayList<>();
             ResultSet resultSet = statement.executeQuery(SQL_SELECT_ALL);
             while (resultSet.next()) {
+                Integer id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
-                Documents documentFromDb = new Documents(name);
+                Documents documentFromDb = new Documents(id, name);
                 documentsFromDb.add(documentFromDb);
             }
             resultSet.close();
